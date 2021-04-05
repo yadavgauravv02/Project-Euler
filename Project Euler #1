@@ -1,0 +1,72 @@
+// PROBLEM-LINK : https://www.hackerrank.com/contests/projecteuler/challenges/euler009/problem
+// PROBLEM-NAME : Multiples of 3 and 5
+
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define night_rider ios::sync_with_stdio(false);cin.tie(NULL);
+#define double long double
+#define int long long int
+#define en "\n"
+#define fi first
+#define se second
+#define PB push_back
+#define all(v) v.begin(),v.end()
+#define allr(v) v.rbegin(),v.rend()
+#define rep(i,x,y) for(int i=x ; i<y ; i++)
+#define erep(i,x,y) for(int i=x ; i<=y ; i++)
+#define erepr(i,x,y) for(int i=x ; i>=y ; i--)
+#define repr(i,x,y) for(int i=x ; i>y ; i--)
+
+typedef vector<int> vi;
+typedef vector<vector<int>> vii;
+typedef pair<int,int> pi;
+typedef vector<pair<int,int>> pii;
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+const int no=3e6+5,modulo=1e9+7,inf=1e18,N=2e3+1;
+int ar[no] ,br[no],cr[no];//,dr[no],er[no];
+//int mat[N][N];
+//int used[no];
+//int color[no];
+//pii adj[no];
+//vi adj[no] , ans[no];
+//LOWER_BOUND(n) - FIRST ELEMENT GREATER THAN EQUAL TO n
+//UPPER_BOUND(n) - FIRST ELEMENT GREATER THAN n
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------                                                                        
+
+void solve () {
+    int n=0,m=0,a=0,b=0,c=0,d=0,x=0,y=0,z=0,w=0,k=0;                                        
+    cin>>n;
+    a=n/3;b=n/5;c=n/15;
+    if(n%3==0) a--;
+    if(n%5==0) b--;
+    if(n%15==0) c--;
+    x+=(a*(a+1)*3)/2;
+    x+=(b*(b+1)*5)/2;
+    x-=(c*(c+1)*15)/2;
+    cout<<x<<en;
+}
+
+inline void runn() {
+    #ifndef ONLINE_JUDGE
+    freopen("input.txt","r",stdin);      
+    freopen("output.txt","w",stdout);   
+    #endif
+}
+
+signed main()
+{
+    night_rider
+    //runn();
+    int t=1;
+    cout<<fixed<<setprecision(15);
+    cin>>t;
+    rep(i,1,t+1) {
+       // cout << "Case #" << i << ": ";
+        solve();
+    }
+}
